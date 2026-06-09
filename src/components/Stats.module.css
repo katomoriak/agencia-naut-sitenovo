@@ -1,0 +1,97 @@
+.statsSection {
+  padding: 2rem 0;
+  position: relative;
+  z-index: 5;
+}
+
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Divisores verticais */
+.statItem:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1rem;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: var(--border-color);
+}
+
+.valueWrapper {
+  margin-bottom: 0.5rem;
+}
+
+.value {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.zeroText {
+  color: var(--text-main);
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  max-width: 200px;
+  line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+  .statsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 1rem;
+  }
+  .statItem:nth-child(even)::after {
+    display: none;
+  }
+  .statItem:nth-child(1)::after,
+  .statItem:nth-child(3)::after {
+    right: -0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .statsContainer {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem 1.5rem;
+  }
+  .statItem::after {
+    display: none !important;
+  }
+  .value {
+    font-size: 2.4rem;
+  }
+  .zeroText {
+    font-size: 2.2rem;
+  }
+}

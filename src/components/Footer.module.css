@@ -1,0 +1,250 @@
+.footer {
+  background: var(--bg-secondary);
+  position: relative;
+  border-top: 1px solid var(--border-color);
+  padding-top: 5rem;
+  z-index: 5;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr 1.2fr;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoIcon {
+  object-fit: contain;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoBrand {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.logoSub {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.15rem;
+}
+
+.brandDesc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.socialLink {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  border-bottom: 1px solid transparent;
+}
+
+.socialLink:hover {
+  color: var(--accent-orange);
+  border-color: var(--accent-orange);
+}
+
+.linksCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.colTitle {
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.linksList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.linksList li {
+  display: flex;
+  flex-direction: column;
+}
+
+.linksList a {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  width: fit-content;
+}
+
+.linksList a:hover {
+  color: var(--text-main);
+  transform: translateX(2px);
+}
+
+.contactLabel {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.contactValue {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  width: fit-content;
+}
+
+.contactValue:hover {
+  color: var(--accent-orange);
+}
+
+.contactText {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.newsletterCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.newsletterDesc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.newsletterForm {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.newsletterInput {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 3.2rem 0.75rem 1rem;
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  font-size: 0.9rem;
+  transition: var(--transition-normal);
+}
+
+.newsletterInput:focus {
+  border-color: var(--accent-orange);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.newsletterBtn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--accent-gradient);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-normal);
+}
+
+.newsletterBtn:hover {
+  background: var(--accent-gradient-hover);
+  transform: scale(1.05);
+}
+
+/* Bottom Bar */
+.bottomBar {
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 0;
+  background: var(--bg-primary);
+}
+
+.bottomContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 992px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+  }
+  .bottomContainer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .footer {
+    padding-top: 4rem;
+  }
+}

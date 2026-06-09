@@ -1,0 +1,184 @@
+.casesSection {
+  background: var(--bg-primary);
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: var(--accent-orange);
+  font-family: var(--font-title);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-main);
+}
+
+.desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.casesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.caseCard {
+  position: relative;
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: var(--transition-normal);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.caseGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 61, 0, 0.15) 0%, transparent 60%);
+  opacity: 0;
+  transition: var(--transition-normal);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.caseCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-color-hover);
+  box-shadow: 0 15px 35px rgba(255, 61, 0, 0.08);
+}
+
+.caseCard:hover .caseGlow {
+  opacity: 1;
+}
+
+.caseTag {
+  background: rgba(255, 143, 104, 0.08);
+  border: 1px solid rgba(255, 143, 104, 0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  color: var(--accent-orange);
+  font-size: 0.75rem;
+  font-family: var(--font-title);
+  font-weight: 600;
+  display: inline-block;
+  width: fit-content;
+}
+
+.caseTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.caseDesc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.25rem 0;
+  margin-bottom: 1.25rem;
+}
+
+.resultItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.resultVal {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.resultLabel {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+  border-left: 2px solid var(--accent-orange);
+  padding-left: 1rem;
+}
+
+.quoteIcon {
+  font-size: 2.2rem;
+  line-height: 0.5;
+  color: var(--accent-orange);
+  opacity: 0.3;
+  margin-bottom: -0.25rem;
+}
+
+.quoteText {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.clientName {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 992px) {
+  .casesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .casesGrid {
+    grid-template-columns: 1fr;
+  }
+  .casesSection {
+    padding: 5rem 0;
+  }
+}
