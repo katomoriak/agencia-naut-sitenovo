@@ -29,6 +29,7 @@ export const metadata = {
 };
 
 import Lightfall from '@/components/Lightfall';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 export default function RootLayout({ children }) {
   return (
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
         <div className="global-content">
           {children}
         </div>
+        <FloatingWhatsApp />
       </body>
     </html>
   );

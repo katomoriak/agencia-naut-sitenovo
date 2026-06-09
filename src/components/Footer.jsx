@@ -56,11 +56,11 @@ export default function Footer() {
             </li>
             <li>
               <span className={styles.contactLabel}>WhatsApp:</span>
-              <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className={styles.contactValue}>(11) 99999-9999</a>
+              <a href="https://wa.me/5511997458464" target="_blank" rel="noopener noreferrer" className={styles.contactValue}>11 9 9745-8464</a>
             </li>
             <li>
               <span className={styles.contactLabel}>Endereço:</span>
-              <p className={styles.contactText}>Av. Paulista, 1000 - Bela Vista<br />São Paulo - SP, 01310-100</p>
+              <p className={styles.contactText}>Rua do bosque, 319 - Jd. Bela Vista<br />São Paulo - SP</p>
             </li>
           </ul>
         </div>
