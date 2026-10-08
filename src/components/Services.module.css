@@ -133,6 +133,35 @@
   background: rgba(255, 255, 255, 0.05);
 }
 
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-orange);
+  margin-top: 1rem;
+  transition: var(--transition-fast);
+}
+
+.card:hover .cardAction {
+  color: #FFFFFF;
+  transform: translateX(4px);
+}
+
+.hubCtaWrapper {
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
 @media (max-width: 992px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);

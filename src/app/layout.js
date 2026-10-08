@@ -4,14 +4,12 @@ import "./globals.css";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -22,9 +20,13 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "Naut | Agência de Marketing Digital & Performance",
-  description: "Aceleramos negócios digitais através de tráfego pago, SEO estratégico, UX/UI design premium e desenvolvimento de sites de alta conversão. Conheça a Naut.",
-  keywords: "agência de marketing digital, tráfego pago, SEO, criação de sites, landing pages, agência naut, marketing de performance, nairuz, wuzi",
+  metadataBase: new URL("https://agencianaut.com.br"),
+  title: {
+    default: "Naut | Agência de Criação de Sites, SEO e Gestão Online",
+    template: "%s",
+  },
+  description: "Aceleramos negócios através de criação de sites modernos, SEO estratégico e gestão online com tráfego de alta escala. Conheça a Agência Naut.",
+  keywords: "agência de marketing digital, criação de sites, desenvolvimento de seo, gestão online empresas, landing pages, agência naut sp",
   robots: "index, follow",
 };
 

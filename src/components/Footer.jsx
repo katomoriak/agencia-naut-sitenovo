@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
       <div className={`container ${styles.footerGrid}`}>
         {/* Brand Column */}
         <div className={styles.brandCol}>
-          <a href="#home" className={styles.logoContainer}>
+          <Link href="/" className={styles.logoContainer}>
             <div className={styles.logoWrapper}>
               <Image 
                 src="/images/logo-icon.png" 
@@ -23,26 +24,27 @@ export default function Footer() {
               <span className={styles.logoBrand}>Naut</span>
               <span className={styles.logoSub}>Marketing Digital</span>
             </div>
-          </a>
+          </Link>
           <p className={styles.brandDesc}>
             Navegamos as águas complexas do marketing digital para direcionar sua marca ao faturamento previsível e escalável.
           </p>
           <div className={styles.socials}>
-            <a href="#" className={styles.socialLink} aria-label="Instagram">Instagram</a>
-            <a href="#" className={styles.socialLink} aria-label="LinkedIn">LinkedIn</a>
-            <a href="#" className={styles.socialLink} aria-label="YouTube">YouTube</a>
+            <a href="https://www.instagram.com/agencianaut" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Instagram">Instagram</a>
+            <a href="https://www.linkedin.com/company/agencianaut" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn">LinkedIn</a>
           </div>
         </div>
 
         {/* Links Column */}
         <div className={styles.linksCol}>
-          <h4 className={styles.colTitle}>Navegação</h4>
+          <h4 className={styles.colTitle}>Soluções & SEO</h4>
           <ul className={styles.linksList}>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#methodology">O Jeito Naut</a></li>
-            <li><a href="#cases">Cases</a></li>
-            <li><a href="#contact">Fale Conosco</a></li>
+            <li><Link href="/servicos">Todos os Serviços</Link></li>
+            <li><Link href="/servicos/criacao-de-sites-profissionais">Criação de Sites</Link></li>
+            <li><Link href="/servicos/criacao-de-landing-pages-alta-conversao">Landing Pages</Link></li>
+            <li><Link href="/servicos/consultoria-seo-estrategico">Consultoria de SEO</Link></li>
+            <li><Link href="/servicos/seo-local-google-meu-negocio">SEO Local no Maps</Link></li>
+            <li><Link href="/servicos/gestao-de-trafego-pago-performance">Tráfego Pago & ROI</Link></li>
+            <li><Link href="/servicos/gestao-de-google-ads-para-empresas">Google Ads</Link></li>
           </ul>
         </div>
 

@@ -6,10 +6,17 @@ import Metodologia from "@/components/Metodologia";
 import Cases from "@/components/Cases";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { COMPANY_INFO } from "@/data/servicesData";
 
 export default function Home() {
+  const breadcrumbs = [
+    { name: "Home", url: `${COMPANY_INFO.domain}/` },
+  ];
+
   return (
     <>
+      <JsonLd breadcrumbs={breadcrumbs} />
       <Header />
       <main>
         <div style={{ position: "relative", overflow: "hidden" }}>
